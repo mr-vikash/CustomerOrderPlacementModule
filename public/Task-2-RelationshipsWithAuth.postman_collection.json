@@ -1,0 +1,1497 @@
+{
+	"info": {
+		"_postman_id": "30c6f3fc-cded-4191-8a7b-84a8e0f560dd",
+		"name": "Task-2-RelationshipsWithAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29887793"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GetConnectionID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "DEMOproject2O2S",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/get_connection_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get_connection_id"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetConnectionID",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "api_key",
+											"value": "DEMOproject2O2S",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/get_connection_id",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"get_connection_id"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Mar 2025 05:14:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Connection Id generated successfully\",\n    \"data\": {\n        \"connection_id\": 292640859\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "RequestOtp",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "connection_id",
+									"value": "292640859",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1111111111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/request_otp",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"request_otp"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "RequestOtp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "connection_id",
+											"value": "292640859",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "1111111111",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/request_otp",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"request_otp"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Mar 2025 05:45:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failed\",\n    \"message\": \"Otp Sent Successfully please go for registration\",\n    \"data\": {\n        \"otp\": 3169\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "RegisterCustomer",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"connection_id\": \"292640859\",\n  \"otp\": \"3169\",\n  \"name\": \"John Doe\",\n  \"email\": \"johndoe@example.com\",\n  \"phone\": \"1234567890\",\n  \"password\": \"secret123\",\n  \"address\": \"123 Main Street, Cityville\",\n  \"pin_code\": \"123456\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register_customer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register_customer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "RegisterCustomer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"connection_id\": \"292640859\",\n  \"otp\": \"3169\",\n  \"name\": \"John Doe\",\n  \"email\": \"johndoe@example.com\",\n  \"phone\": \"1234567890\",\n  \"password\": \"secret123\",\n  \"address\": \"123 Main Street, Cityville\",\n  \"pin_code\": \"123456\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register_customer",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register_customer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Mar 2025 06:01:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Customer Registered Successfully.\",\n    \"data\": {\n        \"customer_details\": {\n            \"name\": \"John Doe\",\n            \"email\": \"johndoe@example.com\",\n            \"address\": \"123 Main Street, Cityville\",\n            \"password\": \"secret123\",\n            \"phone\": \"1234567890\",\n            \"pin_code\": \"123456\",\n            \"updated_at\": \"2025-03-25T06:01:39.000000Z\",\n            \"created_at\": \"2025-03-25T06:01:39.000000Z\",\n            \"id\": 1\n        },\n        \"connection_id\": \"292640859\",\n        \"auth_code\": \"2iRk3OS24cb0KyR\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "ProductlistingWithAuth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "connection_id",
+									"value": "292640859",
+									"type": "text"
+								},
+								{
+									"key": "auth_code",
+									"value": "2iRk3OS24cb0KyR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/product_listing",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product_listing"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ProductlistingWithAuth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "connection_id",
+											"value": "292640859",
+											"type": "text"
+										},
+										{
+											"key": "auth_code",
+											"value": "2iRk3OS24cb0KyR",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/product_listing",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product_listing"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 26 Mar 2025 11:49:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"Wireless Mouse\",\n        \"description\": \"Ergonomic wireless mouse with USB receiver.\",\n        \"price\": \"29.99\",\n        \"stock_quantity\": 100,\n        \"image_url\": \"https://example.com/images/wireless-mouse.jpg\",\n        \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n        \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Mechanical Keyboard\",\n        \"description\": \"RGB backlit mechanical keyboard with tactile switches.\",\n        \"price\": \"79.99\",\n        \"stock_quantity\": 50,\n        \"image_url\": \"https://example.com/images/mechanical-keyboard.jpg\",\n        \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n        \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Gaming Headset\",\n        \"description\": \"Surround sound gaming headset with noise cancellation.\",\n        \"price\": \"59.99\",\n        \"stock_quantity\": 75,\n        \"image_url\": \"https://example.com/images/gaming-headset.jpg\",\n        \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n        \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Laptop Stand\",\n        \"description\": \"Adjustable aluminum laptop stand.\",\n        \"price\": \"34.99\",\n        \"stock_quantity\": 120,\n        \"image_url\": \"https://example.com/images/laptop-stand.jpg\",\n        \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n        \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"USB-C Hub\",\n        \"description\": \"Multi-port USB-C hub with HDMI and USB 3.0 ports.\",\n        \"price\": \"49.99\",\n        \"stock_quantity\": 60,\n        \"image_url\": \"https://example.com/images/usb-c-hub.jpg\",\n        \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n        \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Smartphone Tripod\",\n        \"description\": \"Portable tripod with Bluetooth remote.\",\n        \"price\": \"24.99\",\n        \"stock_quantity\": 90,\n        \"image_url\": \"https://example.com/images/smartphone-tripod.jpg\",\n        \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n        \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Portable SSD\",\n        \"description\": \"1TB portable SSD with fast data transfer.\",\n        \"price\": \"149.99\",\n        \"stock_quantity\": 40,\n        \"image_url\": \"https://example.com/images/portable-ssd.jpg\",\n        \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n        \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Smartwatch\",\n        \"description\": \"Fitness tracker with heart rate monitor and GPS.\",\n        \"price\": \"199.99\",\n        \"stock_quantity\": 30,\n        \"image_url\": \"https://example.com/images/smartwatch.jpg\",\n        \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n        \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Bluetooth Speaker\",\n        \"description\": \"Waterproof Bluetooth speaker with deep bass.\",\n        \"price\": \"89.99\",\n        \"stock_quantity\": 70,\n        \"image_url\": \"https://example.com/images/bluetooth-speaker.jpg\",\n        \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n        \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Power Bank\",\n        \"description\": \"10,000mAh portable charger with fast charging support.\",\n        \"price\": \"39.99\",\n        \"stock_quantity\": 150,\n        \"image_url\": \"https://example.com/images/power-bank.jpg\",\n        \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n        \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GetProductDetailWithAuth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "connection_id",
+									"value": "292640859",
+									"type": "text"
+								},
+								{
+									"key": "auth_code",
+									"value": "2iRk3OS24cb0KyR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/get_product_detail",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get_product_detail"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetProductDetailWithAuth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "connection_id",
+											"value": "292640859",
+											"type": "text"
+										},
+										{
+											"key": "auth_code",
+											"value": "2iRk3OS24cb0KyR",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/get_product_detail",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"get_product_detail"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 26 Mar 2025 11:50:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Wireless Mouse\",\n    \"description\": \"Ergonomic wireless mouse with USB receiver.\",\n    \"price\": \"29.99\",\n    \"stock_quantity\": 100,\n    \"image_url\": \"https://example.com/images/wireless-mouse.jpg\",\n    \"created_at\": \"2025-03-26T05:32:42.000000Z\",\n    \"updated_at\": \"2025-03-26T05:32:42.000000Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "PlaceOrder",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"product_name\": \"HP Laptop\",\n  \"payment_type\": \"Cash on Delivery\",\n  \"price\": 30000,\n  \"status\": \"confirmed\",\n  \"connection_id\": \"292640859\",  // Optional\n  \"auth_code\": \"2iRk3OS24cb0KyR\"         // Optional\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/place_order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"place_order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PlaceOrder",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"product_name\": \"Campus Shoes\",\n  \"payment_type\": \"UPI\",\n  \"price\": 35000,\n  \"status\": \"confirmed\",\n  \"connection_id\": \"292640859\", \n  \"auth_code\": \"2iRk3OS24cb0KyR\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/place_order",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"place_order"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Mar 2025 07:00:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Order placed successfully\",\n    \"data\": {\n        \"Product Name\": \"HP Laptop\",\n        \"Order Status\": \"confirmed\",\n        \"Price\": 30000\n    }\n}"
+						},
+						{
+							"name": "PlaceOrder",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{{\n  \"product_name\": \"I Phone 15\",\n\n  \"product_name\": \"I Phone 15\",\n  \"payment_type\": \"UPI\",\n  \"price\": 1500000,\n  \"status\": \"confirmed\",\n  \"connection_id\": \"292640859\",  // Optional\n  \"auth_code\": \"2iRk3OS24cb0KyR\"         // Optional\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/place_order",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"place_order"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 26 Mar 2025 05:48:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order placed successfully\",\n    \"order_id\": 10\n}"
+						}
+					]
+				},
+				{
+					"name": "OrderListingWithAuth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "connection_id",
+									"value": "292640859",
+									"type": "text"
+								},
+								{
+									"key": "auth_code",
+									"value": "2iRk3OS24cb0KyR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/order_listing",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order_listing"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OrderListingWithAuth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "connection_id",
+											"value": "292640859",
+											"type": "text"
+										},
+										{
+											"key": "auth_code",
+											"value": "2iRk3OS24cb0KyR",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/order_listing",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"order_listing"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 26 Mar 2025 11:43:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"status\": \"confirmed\",\n        \"customer_id\": 1,\n        \"payment_method_id\": 2,\n        \"created_at\": \"2025-03-25T06:36:38.000000Z\",\n        \"updated_at\": \"2025-03-25T06:36:38.000000Z\",\n        \"price\": 0,\n        \"order_items\": [],\n        \"transaction\": null\n    },\n    {\n        \"id\": 2,\n        \"status\": \"confirmed\",\n        \"customer_id\": 1,\n        \"payment_method_id\": 2,\n        \"created_at\": \"2025-03-25T06:39:10.000000Z\",\n        \"updated_at\": \"2025-03-25T06:39:10.000000Z\",\n        \"price\": 0,\n        \"order_items\": [],\n        \"transaction\": null\n    },\n    {\n        \"id\": 3,\n        \"status\": \"confirmed\",\n        \"customer_id\": 1,\n        \"payment_method_id\": 6,\n        \"created_at\": \"2025-03-25T06:53:12.000000Z\",\n        \"updated_at\": \"2025-03-25T06:53:12.000000Z\",\n        \"price\": 70000,\n        \"order_items\": [],\n        \"transaction\": null\n    },\n    {\n        \"id\": 4,\n        \"status\": \"confirmed\",\n        \"customer_id\": 1,\n        \"payment_method_id\": 6,\n        \"created_at\": \"2025-03-25T07:00:16.000000Z\",\n        \"updated_at\": \"2025-03-25T07:00:16.000000Z\",\n        \"price\": 30000,\n        \"order_items\": [],\n        \"transaction\": null\n    },\n    {\n        \"id\": 9,\n        \"status\": \"cancelled\",\n        \"customer_id\": 1,\n        \"payment_method_id\": 1,\n        \"created_at\": \"2025-03-25T19:31:55.000000Z\",\n        \"updated_at\": \"2025-03-26T06:10:14.000000Z\",\n        \"price\": 35000,\n        \"order_items\": [],\n        \"transaction\": {\n            \"id\": 1,\n            \"order_id\": 9,\n            \"amount\": \"0.00\",\n            \"status\": \"pending\",\n            \"created_at\": \"2025-03-25T19:31:56.000000Z\",\n            \"updated_at\": \"2025-03-25T19:31:56.000000Z\"\n        }\n    },\n    {\n        \"id\": 10,\n        \"status\": \"confirmed\",\n        \"customer_id\": 1,\n        \"payment_method_id\": 4,\n        \"created_at\": \"2025-03-26T05:48:33.000000Z\",\n        \"updated_at\": \"2025-03-26T05:48:33.000000Z\",\n        \"price\": 1500000,\n        \"order_items\": [],\n        \"transaction\": {\n            \"id\": 2,\n            \"order_id\": 10,\n            \"amount\": \"0.00\",\n            \"status\": \"pending\",\n            \"created_at\": \"2025-03-26T05:48:33.000000Z\",\n            \"updated_at\": \"2025-03-26T05:48:33.000000Z\"\n        }\n    },\n    {\n        \"id\": 11,\n        \"status\": \"confirmed\",\n        \"customer_id\": 1,\n        \"payment_method_id\": 4,\n        \"created_at\": \"2025-03-26T09:44:22.000000Z\",\n        \"updated_at\": \"2025-03-26T09:44:22.000000Z\",\n        \"price\": 35000,\n        \"order_items\": [],\n        \"transaction\": {\n            \"id\": 3,\n            \"order_id\": 11,\n            \"amount\": \"0.00\",\n            \"status\": \"pending\",\n            \"created_at\": \"2025-03-26T09:44:22.000000Z\",\n            \"updated_at\": \"2025-03-26T09:44:22.000000Z\"\n        }\n    },\n    {\n        \"id\": 13,\n        \"status\": \"confirmed\",\n        \"customer_id\": 1,\n        \"payment_method_id\": 4,\n        \"created_at\": \"2025-03-26T09:54:08.000000Z\",\n        \"updated_at\": \"2025-03-26T09:54:08.000000Z\",\n        \"price\": 35000,\n        \"order_items\": [\n            {\n                \"id\": 1,\n                \"order_id\": 13,\n                \"product_name\": \"Product 1\",\n                \"quantity\": 2,\n                \"price\": \"100.00\",\n                \"created_at\": \"2025-03-26T09:54:08.000000Z\",\n                \"updated_at\": \"2025-03-26T09:54:08.000000Z\"\n            },\n            {\n                \"id\": 2,\n                \"order_id\": 13,\n                \"product_name\": \"Product 2\",\n                \"quantity\": 1,\n                \"price\": \"50.00\",\n                \"created_at\": \"2025-03-26T09:54:08.000000Z\",\n                \"updated_at\": \"2025-03-26T09:54:08.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"order_id\": 13,\n                \"product_name\": \"Product 3\",\n                \"quantity\": 3,\n                \"price\": \"75.50\",\n                \"created_at\": \"2025-03-26T09:54:08.000000Z\",\n                \"updated_at\": \"2025-03-26T09:54:08.000000Z\"\n            }\n        ],\n        \"transaction\": {\n            \"id\": 4,\n            \"order_id\": 13,\n            \"amount\": \"476.50\",\n            \"status\": \"pending\",\n            \"created_at\": \"2025-03-26T09:54:08.000000Z\",\n            \"updated_at\": \"2025-03-26T09:54:08.000000Z\"\n        }\n    },\n    {\n        \"id\": 14,\n        \"status\": \"confirmed\",\n        \"customer_id\": 1,\n        \"payment_method_id\": 4,\n        \"created_at\": \"2025-03-26T10:23:47.000000Z\",\n        \"updated_at\": \"2025-03-26T10:23:47.000000Z\",\n        \"price\": 0,\n        \"order_items\": [],\n        \"transaction\": {\n            \"id\": 5,\n            \"order_id\": 14,\n            \"amount\": \"0.00\",\n            \"status\": \"pending\",\n            \"created_at\": \"2025-03-26T10:23:47.000000Z\",\n            \"updated_at\": \"2025-03-26T10:23:47.000000Z\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "CancelOrderWithauth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "cancelled",
+									"type": "text"
+								},
+								{
+									"key": "connection_id",
+									"value": "292640859",
+									"type": "text"
+								},
+								{
+									"key": "auth_code",
+									"value": "2iRk3OS24cb0KyR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cancel_order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cancel_order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CancelOrderWithauth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "9",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "cancelled",
+											"type": "text"
+										},
+										{
+											"key": "connection_id",
+											"value": "292640859",
+											"type": "text"
+										},
+										{
+											"key": "auth_code",
+											"value": "2iRk3OS24cb0KyR",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/cancel_order",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"cancel_order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 26 Mar 2025 11:45:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order cancelled successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "OrderDetailsWithAuth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "connection_id",
+									"value": "292640859",
+									"type": "text"
+								},
+								{
+									"key": "auth_code",
+									"value": "2iRk3OS24cb0KyR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/order_detail",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order_detail"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OrderDetailsWithAuth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "9",
+											"type": "text"
+										},
+										{
+											"key": "connection_id",
+											"value": "292640859",
+											"type": "text"
+										},
+										{
+											"key": "auth_code",
+											"value": "2iRk3OS24cb0KyR",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/order_detail",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"order_detail"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 26 Mar 2025 11:46:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"status\": \"cancelled\",\n    \"customer_id\": 1,\n    \"payment_method_id\": 1,\n    \"created_at\": \"2025-03-25T19:31:55.000000Z\",\n    \"updated_at\": \"2025-03-26T06:10:14.000000Z\",\n    \"price\": 35000,\n    \"order_items\": [],\n    \"transaction\": {\n        \"id\": 1,\n        \"order_id\": 9,\n        \"amount\": \"0.00\",\n        \"status\": \"pending\",\n        \"created_at\": \"2025-03-25T19:31:56.000000Z\",\n        \"updated_at\": \"2025-03-25T19:31:56.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "AddToCartWithAuth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "customer_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "connection_id",
+									"value": "292640859",
+									"type": "text"
+								},
+								{
+									"key": "auth_code",
+									"value": "2iRk3OS24cb0KyR",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/add_to_cart",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"add_to_cart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "AddToCartWithAuth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "customer_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "connection_id",
+											"value": "292640859",
+											"type": "text"
+										},
+										{
+											"key": "auth_code",
+											"value": "2iRk3OS24cb0KyR",
+											"type": "text"
+										},
+										{
+											"key": "product_id",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/add_to_cart",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"add_to_cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 26 Mar 2025 12:11:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Item added to cart successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ShowCartItemsWithAuth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "customer_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "connection_id",
+									"value": "292640859",
+									"type": "text"
+								},
+								{
+									"key": "auth_code",
+									"value": "2iRk3OS24cb0KyR",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/show_cart_items",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"show_cart_items"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ShowCartItemsWithAuth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "customer_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "connection_id",
+											"value": "292640859",
+											"type": "text"
+										},
+										{
+											"key": "auth_code",
+											"value": "2iRk3OS24cb0KyR",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/show_cart_items",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"show_cart_items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 26 Mar 2025 11:56:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"cart_items\": []\n    }\n}"
+						},
+						{
+							"name": "ShowCartItemsWithAuth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "customer_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "connection_id",
+											"value": "292640859",
+											"type": "text"
+										},
+										{
+											"key": "auth_code",
+											"value": "2iRk3OS24cb0KyR",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/show_cart_items",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"show_cart_items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.17"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 26 Mar 2025 12:12:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"cart_items\": [\n            {\n                \"id\": 4,\n                \"customer_id\": 1,\n                \"product_name\": \"Wireless Mouse\",\n                \"quantity\": 1,\n                \"price\": \"29.99\",\n                \"created_at\": \"2025-03-26T12:10:57.000000Z\",\n                \"updated_at\": \"2025-03-26T12:10:57.000000Z\",\n                \"product_id\": 2\n            },\n            {\n                \"id\": 5,\n                \"customer_id\": 1,\n                \"product_name\": \"Mechanical Keyboard\",\n                \"quantity\": 1,\n                \"price\": \"79.99\",\n                \"created_at\": \"2025-03-26T12:11:10.000000Z\",\n                \"updated_at\": \"2025-03-26T12:11:10.000000Z\",\n                \"product_id\": 3\n            },\n            {\n                \"id\": 6,\n                \"customer_id\": 1,\n                \"product_name\": \"Gaming Headset\",\n                \"quantity\": 1,\n                \"price\": \"59.99\",\n                \"created_at\": \"2025-03-26T12:11:15.000000Z\",\n                \"updated_at\": \"2025-03-26T12:11:15.000000Z\",\n                \"product_id\": 4\n            },\n            {\n                \"id\": 7,\n                \"customer_id\": 1,\n                \"product_name\": \"Laptop Stand\",\n                \"quantity\": 1,\n                \"price\": \"34.99\",\n                \"created_at\": \"2025-03-26T12:11:19.000000Z\",\n                \"updated_at\": \"2025-03-26T12:11:19.000000Z\",\n                \"product_id\": 5\n            },\n            {\n                \"id\": 8,\n                \"customer_id\": 1,\n                \"product_name\": \"USB-C Hub\",\n                \"quantity\": 1,\n                \"price\": \"49.99\",\n                \"created_at\": \"2025-03-26T12:11:24.000000Z\",\n                \"updated_at\": \"2025-03-26T12:11:24.000000Z\",\n                \"product_id\": 6\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
