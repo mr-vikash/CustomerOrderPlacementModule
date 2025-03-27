@@ -12,6 +12,9 @@ use App\Models\CartItem;
 use App\Models\Transaction;
 use Illuminate\Support\Facades\DB;
 
+
+
+
 class OrderController extends Controller
 {
     use AuthenticationTrait;
@@ -101,7 +104,7 @@ class OrderController extends Controller
         if (!$order) {
             return response()->json(['message' => 'Order not found'], 404);
         }
-        
+
         $order->update(['status' => "cancelled"]);
         return response()->json(['message' => 'Order cancelled successfully'], 200);
     }
